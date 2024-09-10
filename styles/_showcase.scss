@@ -1,0 +1,52 @@
+.showcase {
+  height: fit-content;
+  background: radial-gradient(
+    circle at center bottom,
+    rgba(99, 101, 241, 0.1) 0%,
+    rgb(218, 70, 239, 0.05) 42%,
+    rgb(241, 244, 253, 0.07) 83%
+  );
+  padding-top: 2rem;
+  h1 {
+    // font-weight: 800;
+    line-height: 44.4px;
+    font-size: 34.1px;
+    padding-top: 1rem;
+  }
+}
+.info {
+  line-height: 28.8px;
+  font-size: 18px;
+  text-shadow: 2px 2px 5px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.showcase-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+.btn-store {
+  border: none;
+  width: 100%;
+  height: 6vh;
+  border-radius: 8px;
+  padding: 4px;
+  background-color: #131022;
+}
+.discovermore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.btn-discovermore {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.75rem;
+  border: none;
+  background-color: #fff;
+}

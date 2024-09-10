@@ -1,0 +1,33 @@
+.page-3 {
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  padding-top: 2rem;
+  background-color: $lightBG;
+}
+.how-it-works-grid {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  h2 {
+    font-size: 27.9px;
+  }
+}
+.balance-img {
+  width: 100%;
+}
+.transfer-text {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  h3 {
+    font-size: 21.6px;
+    line-height: 30.2px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}
