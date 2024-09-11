@@ -1,0 +1,34 @@
+.page-5 {
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.contact {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.btn-contact {
+  background-color: vars.$primary;
+  color: white;
+  width: 162px;
+  height: 50px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+.newsletter {
+  display: grid;
+  background-color: vars.$lightBG;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.btn-subscribe {
+  border: none;
+  background-color: vars.$primary;
+  color: white;
+}

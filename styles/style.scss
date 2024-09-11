@@ -1,9 +1,11 @@
-@import "./variables";
+@use "./variables" as vars;
 @import "./header";
 @import "./showcase";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import "./features";
 @import "./howitworks";
+@import "./faq";
+@import "./subscribe";
 
 * {
   margin: 0;
@@ -23,6 +25,6 @@ body {
     font-weight: 800;
   }
   p {
-    color: $textColor;
+    color: vars.$textColor;
   }
 }
