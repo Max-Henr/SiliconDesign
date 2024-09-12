@@ -1,9 +1,8 @@
 .page-5 {
   width: 100%;
   height: fit-content;
-  padding: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding: 0.5rem;
+  margin-top: 2rem;
 }
 .contact {
   text-align: center;
@@ -23,12 +22,44 @@
 }
 .newsletter {
   display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr auto auto;
   background-color: vars.$lightBG;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
+  h2 {
+    font-size: 21.6px;
+    line-height: 30.2px;
+  }
 }
+.newsletter-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.form-email {
+  grid-column: 1/4;
+}
+.form-input {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+.email-input {
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  width: 100%;
+  height: 52px;
+}
+
 .btn-subscribe {
   border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  width: 115px;
+  height: 52px;
   background-color: vars.$primary;
   color: white;
 }
