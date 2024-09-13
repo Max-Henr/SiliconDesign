@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-.container {
-  width: 100%;
-  padding: 1rem;
+header .container {
+  padding-top: 0.5rem;
 }
 
 a {
@@ -43,7 +42,8 @@ a {
 .btn-mobile-menu {
   border: none;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #3E4265;
 }
 
 header .container {
@@ -118,10 +118,6 @@ input:checked + .slider:before {
 }
 
 .showcase {
-  width: 100%;
-  padding: 1rem;
-  height: -moz-fit-content;
-  height: fit-content;
   padding-top: 2rem;
 }
 .showcase h1 {
@@ -133,7 +129,7 @@ input:checked + .slider:before {
 .info {
   line-height: 28.8px;
   font-size: 18px;
-  text-shadow: 2px 2px 5px;
+  text-shadow: 0 4px 3px;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -148,19 +144,23 @@ input:checked + .slider:before {
 .btn-store {
   border: none;
   width: 100%;
-  height: 6vh;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 8px;
-  padding: 4px;
+  padding: 8px;
   background-color: #131022;
 }
 
 .discovermore {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.discovermore p {
+  margin: 0;
 }
 
 .btn-discovermore {
@@ -171,12 +171,8 @@ input:checked + .slider:before {
   background-color: #fff;
 }
 
-.page-2 {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 1rem;
-  padding-bottom: 4rem;
+.feature {
+  padding-top: 2rem;
 }
 
 .app-features {
@@ -218,15 +214,11 @@ input:checked + .slider:before {
 }
 
 .page-3 {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 1rem;
-  padding-top: 2rem;
   background-color: #f3f6ff;
 }
 
 .how-it-works-grid {
+  padding-top: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -255,17 +247,16 @@ input:checked + .slider:before {
   line-height: 25.6px;
 }
 
-.page-4 {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 1rem;
+.FAQ {
   padding-top: 2rem;
-  padding-bottom: 1rem;
 }
 
-.FAQ {
+.FAQ-text {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .accordion {
@@ -275,11 +266,22 @@ input:checked + .slider:before {
 
 .accordion-button {
   box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03) !important;
-  font-weight: 800;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+.accordion-button:not(.collapsed)::after {
+  color: #131022;
+  background-color: #6366f1 !important;
 }
 .accordion-button:not(.collapsed) {
   color: #131022;
   background-color: white !important;
+}
+
+.accordion-button::after {
+  background-color: #f3f6ff;
+  border-radius: 50%;
 }
 
 .accordion-button:focus {
@@ -300,7 +302,7 @@ input:checked + .slider:before {
 
 .contact {
   text-align: center;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .btn-contact {
@@ -341,15 +343,27 @@ input:checked + .slider:before {
 }
 
 .form-input {
+  display: flex;
+  align-items: center;
   position: relative;
   padding-bottom: 1.5rem;
+}
+.form-input i {
+  position: absolute;
+  left: 0;
+  padding-left: 1rem;
 }
 
 .email-input {
   border: none;
-  border-radius: 0.5rem 0 0 0.5rem;
+  border-radius: 0.5rem;
   width: 100%;
   height: 52px;
+  padding-left: 2.5rem;
+}
+.email-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #6366f1;
 }
 
 .btn-subscribe {

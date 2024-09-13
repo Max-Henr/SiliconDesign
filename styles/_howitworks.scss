@@ -1,11 +1,8 @@
 .page-3 {
-  width: 100%;
-  height: fit-content;
-  padding: 1rem;
-  padding-top: 2rem;
   background-color: vars.$lightBG;
 }
 .how-it-works-grid {
+  padding-top: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
