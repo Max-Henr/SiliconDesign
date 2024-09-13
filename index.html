@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="page-0">
-      <div class="container header-main">
+      <div class="container-md header-main">
         <a class="silicon-logo" href="index.html">
           <img src="/images/showcase/logo.svg.svg" alt="silicon logo" />
           <span>Silicon</span>
@@ -24,6 +24,7 @@
           <a id="nav-menu" class="navbar" href="#">Features</a>
         </nav>
         <div class="btn-toggle-switch">
+          <span class="label">Dark Mode</span>
           <label class="switch">
             <input type="checkbox" />
             <span class="slider round"></span>
@@ -42,23 +43,27 @@
       <section class="page-1">
         <div class="showcase container">
           <div class="showcase-grid">
-            <h1>Manage All Your Money in One App</h1>
+            <h1>Manage All Your <br />Money in One App</h1>
             <p class="info">
               We offer you a new generation of the mobile banking. Save, spend &
               manage money in your pocket
             </p>
-            <button class="btn-store">
-              <img
-                src="/images/showcase/appstore-light.svg fill.svg"
-                alt="download on appstore"
-              />
-            </button>
-            <button class="btn-store">
-              <img
-                src="/images/showcase/googleplay-light.svg.svg"
-                alt="download on google play"
-              />
-            </button>
+            <div class="btn-store-box">
+              <button class="btn-store">
+                <img
+                  src="/images/showcase/applelogo.svg"
+                  alt="download on appstore"
+                />
+                <p>Download on the<br /><span>App Store</span></p>
+              </button>
+              <button class="btn-store">
+                <img
+                  src="/images/showcase/googlelogo.svg"
+                  alt="download on google play"
+                />
+                <p>GET IT ON <br /><span>Google Play</span></p>
+              </button>
+            </div>
             <div class="discovermore">
               <button class="btn-discovermore">
                 <img
@@ -68,6 +73,31 @@
               </button>
               <p>Discover more</p>
             </div>
+            <div class="img-showcase">
+              <img src="/images/showcase/iphone.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="brands">
+        <div class="container brand-flex">
+          <div id="brand-1" class="brand-box">
+            <img src="/images/features/brand1.svg" alt="" />
+          </div>
+          <div id="brand-2" class="brand-box">
+            <img src="/images/features/brand2.svg" alt="" />
+          </div>
+          <div id="brand-3" class="brand-box">
+            <img src="/images/features/brand3.svg" alt="" />
+          </div>
+          <div id="brand-4" class="brand-box">
+            <img src="/images/features/brand4.svg" alt="" />
+          </div>
+          <div id="brand-5" class="brand-box">
+            <img src="/images/features/brand5.svg" alt="" />
+          </div>
+          <div id="brand-6" class="brand-box">
+            <img src="/images/features/brand6.svg" alt="" />
           </div>
         </div>
       </section>
@@ -81,77 +111,79 @@
               sit quidem error quas mollitia, provident aspernatur et?
             </p>
           </div>
-          <div id="icon1" class="icons">
-            <div class="icon-box">
-              <img src="images/features/payment.svg" alt="" />
+          <div class="icon-grid">
+            <div id="icon1" class="icons">
+              <div class="icon-box">
+                <img src="images/features/payment.svg" alt="" />
+              </div>
+              <div class="feature-text">
+                <h3>Easy Payments</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Quas, eos!
+                </p>
+              </div>
             </div>
-            <div class="feature-text">
-              <h3>Easy Payments</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas,
-                eos!
-              </p>
+            <div id="icon2" class="icons">
+              <div class="icon-box">
+                <img src="images/features/security.svg" alt="" />
+              </div>
+              <div class="feature-text">
+                <h3>Data Security</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
             </div>
-          </div>
-          <div id="icon2" class="icons">
-            <div class="icon-box">
-              <img src="images/features/security.svg" alt="" />
-            </div>
-            <div class="feature-text">
-              <h3>Data Security</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
 
-          <div id="icon3" class="icons">
-            <div class="icon-box">
-              <img src="images/features/statistics.svg" alt="" />
+            <div id="icon3" class="icons">
+              <div class="icon-box">
+                <img src="images/features/statistics.svg" alt="" />
+              </div>
+              <div class="feature-text">
+                <h3>Cost Statistics</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Distinctio!
+                </p>
+              </div>
             </div>
-            <div class="feature-text">
-              <h3>Cost Statistics</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Distinctio!
-              </p>
-            </div>
-          </div>
 
-          <div id="icon4" class="icons">
-            <div class="icon-box">
-              <img src="images/features/support.svg" alt="" />
+            <div id="icon4" class="icons">
+              <div class="icon-box">
+                <img src="images/features/support.svg" alt="" />
+              </div>
+              <div class="feature-text">
+                <h3>Support 24/7</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Laborum?
+                </p>
+              </div>
             </div>
-            <div class="feature-text">
-              <h3>Support 24/7</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Laborum?
-              </p>
-            </div>
-          </div>
 
-          <div id="icon5" class="icons">
-            <div class="icon-box">
-              <img src="images/features/cashback.svg" alt="" />
+            <div id="icon5" class="icons">
+              <div class="icon-box">
+                <img src="images/features/cashback.svg" alt="" />
+              </div>
+              <div class="feature-text">
+                <h3>Regular Cashbacks</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti!
+                </p>
+              </div>
             </div>
-            <div class="feature-text">
-              <h3>Regular Cashbacks</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti!
-              </p>
-            </div>
-          </div>
 
-          <div id="icon6" class="icons">
-            <div class="icon-box">
-              <img src="images/features/standards.svg" alt="" />
-            </div>
-            <div class="feature-text">
-              <h3>Top Standards</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                culpa repudiandae!
-              </p>
+            <div id="icon6" class="icons">
+              <div class="icon-box">
+                <img src="images/features/standards.svg" alt="" />
+              </div>
+              <div class="feature-text">
+                <h3>Top Standards</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                  culpa repudiandae!
+                </p>
+              </div>
             </div>
           </div>
         </div>

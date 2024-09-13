@@ -1,7 +1,12 @@
-header .container {
+
+.header-main {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
   padding-top: 0.5rem;
 }
-
 a {
   text-decoration: none;
   color: vars.$headingDark;
@@ -38,12 +43,8 @@ a {
   font-size: 1.5rem;
   color: vars.$mobileMenu;
 }
-header .container {
-  display: grid;
-  grid-template-columns: 1fr auto auto auto;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
+.label{
+  display: none;
 }
 // everything below this is code from w3schools
 
@@ -108,4 +109,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+@media (min-width: 768px){
+  .header-main{
+    padding-top: 1.5rem;
+    gap: 5rem;
+  }
+  .label{
+    display: inline;
+    margin-right: 1rem;
+    font-weight: 600;
+  }
 }

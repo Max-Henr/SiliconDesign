@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-header .container {
+.header-main {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
   padding-top: 0.5rem;
 }
 
@@ -46,12 +51,8 @@ a {
   color: #3E4265;
 }
 
-header .container {
-  display: grid;
-  grid-template-columns: 1fr auto auto auto;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
+.label {
+  display: none;
 }
 
 /* The switch - the box around the slider */
@@ -113,12 +114,23 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+@media (min-width: 768px) {
+  .header-main {
+    padding-top: 1.5rem;
+    gap: 5rem;
+  }
+  .label {
+    display: inline;
+    margin-right: 1rem;
+    font-weight: 600;
+  }
+}
 .page-1 {
   background: radial-gradient(circle at center bottom, rgba(99, 101, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
 }
 
 .showcase {
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 .showcase h1 {
   line-height: 44.4px;
@@ -141,14 +153,31 @@ input:checked + .slider:before {
   gap: 1rem;
 }
 
+.btn-store-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .btn-store {
   border: none;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 50px;
   border-radius: 8px;
   padding: 8px;
   background-color: #131022;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn-store p {
+  font-size: 8px;
+  color: white;
+  text-align: start;
+}
+.btn-store p span {
+  font-size: 15px;
 }
 
 .discovermore {
@@ -171,8 +200,52 @@ input:checked + .slider:before {
   background-color: #fff;
 }
 
+.img-showcase {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .showcase-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .showcase h1 {
+    grid-column: 1/12;
+  }
+  .info {
+    grid-column: 1/6;
+    grid-row: 7/8;
+    text-align: left;
+    text-shadow: none;
+  }
+  .btn-store-box {
+    grid-column: 1/6;
+    grid-row: 8/9;
+    flex-direction: row;
+  }
+  .btn-store {
+    position: relative;
+    justify-content: start;
+  }
+  .btn-store p {
+    position: absolute;
+    left: 40px;
+    padding-right: 5px;
+  }
+  .discovermore {
+    grid-column: 1/5;
+    grid-row: 9/10;
+    justify-content: start;
+  }
+  .img-showcase {
+    display: block;
+    width: 100%;
+    grid-row: 4/12;
+    grid-column: 5/12;
+  }
+}
 .feature {
-  padding-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .app-features {
@@ -190,13 +263,13 @@ input:checked + .slider:before {
 }
 
 .icons {
-  padding-top: 2rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: start;
 }
 .icons p {
-  padding-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .feature-text {
@@ -213,6 +286,36 @@ input:checked + .slider:before {
   border-radius: 1rem;
 }
 
+@media (min-width: 768px) {
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  #icon1 {
+    grid-column: 1/7;
+    grid-row: 1/2;
+  }
+  #icon2 {
+    grid-column: 7/13;
+    grid-row: 1/2;
+  }
+  #icon3 {
+    grid-column: 1/7;
+    grid-row: 2/3;
+  }
+  #icon4 {
+    grid-column: 7/13;
+    grid-row: 2/3;
+  }
+  #icon5 {
+    grid-column: 1/7;
+    grid-row: 3/4;
+  }
+  #icon6 {
+    grid-column: 7/13;
+    grid-row: 3/4;
+  }
+}
 .page-3 {
   background-color: #f3f6ff;
 }
@@ -378,11 +481,49 @@ input:checked + .slider:before {
   color: white;
 }
 
+#brands {
+  display: none;
+}
+
+.brand-flex {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-box {
+  border: 1px solid #b4b7c9;
+  border-radius: 8px;
+  height: 100px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  #brands {
+    display: block;
+  }
+  #brand-5, #brand-6 {
+    display: none;
+  }
+}
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
 }
 
 body {
