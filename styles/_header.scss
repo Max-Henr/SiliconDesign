@@ -1,4 +1,3 @@
-
 .header-main {
   display: grid;
   grid-template-columns: 1fr auto auto auto;
@@ -43,7 +42,7 @@ a {
   font-size: 1.5rem;
   color: vars.$mobileMenu;
 }
-.label{
+.label {
   display: none;
 }
 // everything below this is code from w3schools
@@ -110,14 +109,34 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-@media (min-width: 768px){
-  .header-main{
+@media (min-width: 768px) {
+  .header-main {
     padding-top: 1.5rem;
     gap: 5rem;
   }
-  .label{
+  .label {
     display: inline;
     margin-right: 1rem;
     font-weight: 600;
+  }
+}
+@media (min-width: 1400px) {
+  .header-main {
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    gap: 2rem;
+  }
+  .navbar {
+    display: block;
+    grid-column: 3/5;
+  }
+  .btn-toggle-switch{
+    grid-column: 9/11;
+  }
+  .btn-primary {
+    display: block;
+    grid-column: 11/13;
+  }
+  .btn-mobile-menu {
+    display: none;
   }
 }
