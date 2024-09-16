@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 .header-main {
   display: grid;
@@ -117,7 +118,10 @@ input:checked + .slider:before {
 @media (min-width: 768px) {
   .header-main {
     padding-top: 1.5rem;
-    gap: 5rem;
+    gap: 1rem;
+  }
+  .btn-toggle-switch {
+    margin-right: 3rem;
   }
   .label {
     display: inline;
@@ -135,10 +139,10 @@ input:checked + .slider:before {
     grid-column: 3/5;
   }
   .btn-toggle-switch {
-    grid-column: 9/11;
+    grid-column: 8/11;
   }
-  .btn-primary {
-    display: block;
+  #auth-signin {
+    display: flex;
     grid-column: 11/13;
   }
   .btn-mobile-menu {
@@ -193,12 +197,19 @@ input:checked + .slider:before {
 }
 .btn-store p {
   font-size: 8px;
-  color: white;
+  color: #fff;
   text-align: start;
+  letter-spacing: 0.5px;
 }
 .btn-store p span {
+  letter-spacing: 0;
   font-size: 15px;
   font-weight: 600;
+}
+
+.fa-apple {
+  color: #fff;
+  font-size: 30px;
 }
 
 .discovermore {
@@ -208,9 +219,6 @@ input:checked + .slider:before {
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-.discovermore p {
-  margin: 0;
 }
 
 .btn-discovermore {
@@ -259,9 +267,38 @@ input:checked + .slider:before {
   }
   .img-showcase {
     display: block;
-    width: 100%;
     grid-row: 4/12;
     grid-column: 5/12;
+  }
+}
+@media (min-width: 1400px) {
+  .showcase h1 {
+    grid-column: 1/6;
+    grid-row: 2/3;
+    text-align: left;
+  }
+  .info {
+    grid-row: 3/4;
+  }
+  .btn-store-box {
+    grid-column: 1/5;
+    grid-row: 4/5;
+  }
+  .btn-store {
+    justify-content: center;
+  }
+  .btn-store p {
+    position: unset;
+  }
+  .discovermore {
+    grid-row: 10/11;
+  }
+  .img-showcase {
+    grid-row: 1/12;
+    grid-column: 7/13;
+  }
+  .img-showcase img {
+    width: 100%;
   }
 }
 .feature {
@@ -397,6 +434,9 @@ input:checked + .slider:before {
 
 .balance-img {
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .transfer-text {
@@ -409,11 +449,34 @@ input:checked + .slider:before {
   font-size: 21.6px;
   line-height: 30.2px;
 }
+.transfer-text h3 span {
+  display: none;
+}
 .transfer-text p {
   font-size: 16px;
   line-height: 25.6px;
 }
 
+.tablet-img {
+  display: none;
+}
+
+.left-img {
+  order: -1;
+}
+
+@media (min-width: 768px) {
+  .transfer-text h3 span {
+    display: inline;
+  }
+  .mobile-img {
+    width: 100%;
+  }
+  .tablet-img {
+    width: 100%;
+    display: flex;
+  }
+}
 .FAQ {
   padding-top: 2rem;
 }
@@ -460,9 +523,6 @@ input:checked + .slider:before {
 }
 
 .page-5 {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
   padding: 0.5rem;
   margin-top: 2rem;
 }
@@ -585,6 +645,85 @@ input:checked + .slider:before {
     display: flex;
   }
 }
+.transfer {
+  margin-top: 2rem;
+  display: none;
+}
+
+.transfer-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.checklist {
+  grid-column: 1/6;
+  grid-row: 2/6;
+}
+
+.sendmoney {
+  grid-column: 7/13;
+  grid-row: 1/5;
+}
+
+.contact {
+  grid-column: 1/6;
+  grid-row: 5/12;
+}
+
+.payment {
+  grid-column: 7/13;
+  grid-row: 6/12;
+}
+
+ul {
+  margin-top: 2rem;
+  padding-left: 12px;
+}
+
+ul li {
+  padding-left: 1rem;
+  line-height: 30px;
+}
+
+ul li::marker {
+  content: "✔";
+  color: #6366f1;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  row-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.payment-text {
+  grid-column: 1/4;
+}
+.payment-text p {
+  margin-top: 1rem;
+}
+
+.cashback-text {
+  grid-column: 4/7;
+}
+.cashback-text p {
+  margin-top: 1rem;
+}
+
+@media (min-width: 1400px) {
+  .transfer {
+    display: block;
+  }
+  #learn-more {
+    display: flex;
+    margin-top: 2rem;
+    width: 190px;
+  }
+  #learn-more i {
+    margin-left: 1rem;
+  }
+}
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -616,6 +755,20 @@ body p {
   color: #585c7b;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
 footer {
   text-align: center;
   font-size: 14px;

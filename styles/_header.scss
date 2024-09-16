@@ -112,7 +112,10 @@ input:checked + .slider:before {
 @media (min-width: 768px) {
   .header-main {
     padding-top: 1.5rem;
-    gap: 5rem;
+    gap: 1rem;
+  }
+  .btn-toggle-switch{
+    margin-right: 3rem;
   }
   .label {
     display: inline;
@@ -130,10 +133,10 @@ input:checked + .slider:before {
     grid-column: 3/5;
   }
   .btn-toggle-switch{
-    grid-column: 9/11;
+    grid-column: 8/11;
   }
-  .btn-primary {
-    display: block;
+  #auth-signin {
+    display: flex;
     grid-column: 11/13;
   }
   .btn-mobile-menu {

@@ -46,13 +46,19 @@
   align-items: center;
   p {
     font-size: 8px;
-    color: white;
+    color: #fff;
     text-align: start;
+    letter-spacing: 0.5px;
     span {
+      letter-spacing: 0;
       font-size: 15px;
       font-weight: 600;
     }
   }
+}
+.fa-apple{
+  color: #fff;
+  font-size: 30px;
 }
 .discovermore {
   display: flex;
@@ -60,10 +66,7 @@
   align-items: center;
   gap: 2rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  p {
-    margin: 0;
-  }
+  margin-bottom: 2rem;  
 }
 .btn-discovermore {
   width: 2.5rem;
@@ -113,8 +116,40 @@
   // }
   .img-showcase {
     display: block;
-    width: 100%;
     grid-row: 4/12;
     grid-column: 5/12;
   }
+}
+@media(min-width:1400px){
+  .showcase{
+    h1{
+      grid-column: 1/6;
+      grid-row: 2/3;
+      text-align: left;
+    }
+  }
+  .info{
+    grid-row: 3/4;
+  }
+  .btn-store-box{
+    grid-column: 1/5;
+    grid-row: 4/5;
+  }
+  .btn-store{
+    justify-content: center;
+    p{
+      position: unset;
+    }
+  }
+  .discovermore{
+    grid-row: 10/11;
+  }
+  .img-showcase{
+    grid-row: 1/12;
+    grid-column: 7/13;
+    img{
+      width: 100%;
+    }
+  }
+
 }

@@ -7,6 +7,7 @@
 @import "./faq";
 @import "./subscribe";
 @import "./brands";
+@import "./transfer";
 
 * {
   box-sizing: border-box;
@@ -34,6 +35,19 @@ body {
   }
   p {
     color: vars.$textColor;
+  }
+}
+.container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
   }
 }
 footer {

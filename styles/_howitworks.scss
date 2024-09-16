@@ -13,6 +13,9 @@
 }
 .balance-img {
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 .transfer-text {
   padding-bottom: 2rem;
@@ -22,9 +25,34 @@
   h3 {
     font-size: 21.6px;
     line-height: 30.2px;
+    span{
+      display: none;
+    }
   }
   p {
     font-size: 16px;
     line-height: 25.6px;
+  }
+}
+.tablet-img{
+  display: none;
+}
+.left-img{
+  order: -1;
+}
+@media(min-width: 768px){
+  .transfer-text{
+    h3{
+      span{
+        display: inline;
+      }
+    }
+  }
+  .mobile-img{
+    width: 100%;
+  }
+  .tablet-img{
+    width: 100%;
+    display: flex;
   }
 }
