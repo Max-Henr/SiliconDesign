@@ -8,6 +8,7 @@
 @import "./subscribe";
 @import "./brands";
 @import "./transfer";
+@import "./ratings";
 
 * {
   box-sizing: border-box;
@@ -39,6 +40,7 @@ body {
 }
 .container {
   width: 100%;
+  height: fit-content;
 }
 @media (min-width: 768px) {
   .container {

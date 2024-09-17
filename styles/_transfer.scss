@@ -7,7 +7,7 @@
    grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .checklist{
-   grid-column: 1/6;
+   grid-column: 2/6;
    grid-row: 2/6;
 }
 .sendmoney{
@@ -15,11 +15,11 @@
    grid-row: 1/5;
 }
 .contact{
-   grid-column: 1/6;
+   grid-column: 2/6;
    grid-row: 5/12;
 }
 .payment{
-   grid-column: 7/13;
+   grid-column: 7/12;
    grid-row: 6/12;
 }
 ul{
@@ -37,7 +37,7 @@ ul li::marker {
 }
 .payment-grid{
    display: grid;
-   grid-template-columns: repeat(8,1fr);
+   grid-template-columns: repeat(12, 0,1fr);
    row-gap: 1rem;
    margin-top: 1rem;
 }

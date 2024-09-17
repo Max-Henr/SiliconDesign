@@ -1,0 +1,64 @@
+.ratings {
+  background-color: vars.$lightBG;
+  display: none;
+}
+.ratings-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.card-flex {
+  display: flex;
+  gap: 2rem;
+}
+.card {
+  width: 400px;
+  height: 350px;
+  padding: 1rem;
+  position: relative;
+  border: none;
+  box-shadow: 1px 1px 5px rgb(128, 126, 126);
+  img {
+   width: 70px;
+  }
+}
+.card:hover{
+   box-shadow: 2px 2px 5px vars.$primary;
+}
+.quote{
+   background-color: vars.$primary;
+   width: 44px;
+   height: 44px;
+   border-radius: 6px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   transform: translate(0, -50%);
+   i{
+      font-size: 25px;
+      color: #fff;
+   }
+}
+.card-main-content{
+   margin-top: 2rem;
+   p{
+      margin-top: 1rem;
+   }
+}
+.role{
+   display: flex;
+   align-items: center;
+   margin-top: 4rem;
+    .bitmoji {
+      width: 48px;
+    }
+}
+
+@media(min-width: 1400px){
+   .ratings{
+      display: block;
+   }
+}
