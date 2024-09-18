@@ -73,3 +73,8 @@
   background-color: vars.$primary;
   color: white;
 }
+@media(min-width: 768px){
+  .contact{
+    display: none;
+  }
+}

@@ -484,8 +484,12 @@ input:checked + .slider:before {
     align-self: center;
   }
 }
+.page-4 {
+  margin: 5rem 0 5rem 0;
+}
+
 .FAQ {
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .FAQ-text {
@@ -503,13 +507,17 @@ input:checked + .slider:before {
 
 .accordion-button {
   box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03) !important;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.accordion-button h5 {
   font-weight: 600;
   font-size: 16px;
   line-height: 20.8px;
+  grid-column: 1/11;
 }
 .accordion-button:not(.collapsed)::after {
-  color: #131022;
-  background-color: #6366f1 !important;
+  display: none;
 }
 .accordion-button:not(.collapsed) {
   color: #131022;
@@ -517,8 +525,30 @@ input:checked + .slider:before {
 }
 
 .accordion-button::after {
+  display: none;
+}
+
+.accordion-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f3f6ff;
+  transition: transform 0.5s ease;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+  grid-column: 12/13;
+  box-shadow: 1px 1px 2px rgb(177, 177, 177);
+}
+.accordion-icon i {
+  transform: translate(0, 10%);
+}
+
+.accordion-button[aria-expanded=true] .accordion-icon {
+  background-color: #6366f1;
+  color: white;
+  transform: rotate(180deg);
+  box-shadow: 1px 1px 5px #6366f1;
 }
 
 .accordion-button:focus {
@@ -529,6 +559,77 @@ input:checked + .slider:before {
   color: #585c7b;
 }
 
+.contact-method {
+  gap: 10px;
+  display: none;
+}
+
+.contact-box {
+  margin-top: 1rem;
+  border: 1px solid #b4b7c9;
+  border-radius: 8px;
+  width: 343px;
+  height: 160px;
+  padding: 20px;
+}
+.contact-box i {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.contact-box p {
+  margin-bottom: 15px;
+}
+
+#contact-phone i {
+  color: blue;
+}
+#contact-phone a {
+  color: blue;
+}
+#contact-phone a::after {
+  padding-left: 1rem;
+  content: "->";
+  font-size: 20px;
+}
+
+#contact-message i {
+  color: green;
+}
+#contact-message a {
+  color: green;
+}
+#contact-message a::after {
+  padding-left: 12px;
+  content: "->";
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .contact-method {
+    display: flex;
+  }
+  .accordion-item {
+    margin-bottom: 1rem;
+    border: none;
+  }
+}
+@media (min-width: 1400px) {
+  .FAQ-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .FAQ-text {
+    grid-column: 1/5;
+    text-align: start;
+  }
+  .accordion {
+    grid-column: 6/13;
+    grid-row: 1/12;
+  }
+  .contact-method {
+    grid-column: 1/5;
+  }
+}
 .page-5 {
   padding: 0.5rem;
   margin-top: 2rem;
@@ -612,6 +713,11 @@ input:checked + .slider:before {
   color: white;
 }
 
+@media (min-width: 768px) {
+  .contact {
+    display: none;
+  }
+}
 #brands {
   display: none;
 }
@@ -672,7 +778,7 @@ input:checked + .slider:before {
   grid-row: 1/5;
 }
 
-.contact {
+.contact-img {
   grid-column: 2/6;
   grid-row: 5/12;
 }
