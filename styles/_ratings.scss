@@ -1,10 +1,10 @@
 .ratings {
-  background-color: vars.$lightBG;
+  background-color: var(--clr-gray100);
   display: none;
 }
 .ratings-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
   justify-content: space-between;
 }
@@ -18,16 +18,17 @@
   padding: 1rem;
   position: relative;
   border: none;
-  box-shadow: 1px 1px 5px rgb(128, 126, 126);
+  background-color: var(--clr-white);
+  box-shadow: 1px 1px 5px var(--clr-boxshadow);
   img {
    width: 70px;
   }
 }
 .card:hover{
-   box-shadow: 2px 2px 5px vars.$primary;
+   box-shadow: 2px 2px 5px var(--clr-primary);
 }
 .quote{
-   background-color: vars.$primary;
+   background-color: var(--clr-primary);
    width: 44px;
    height: 44px;
    border-radius: 6px;
@@ -52,6 +53,9 @@
    display: flex;
    align-items: center;
    margin-top: 4rem;
+   strong{
+      color: var(--clr-header);
+   }
     .bitmoji {
       width: 48px;
     }

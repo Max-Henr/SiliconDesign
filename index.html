@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/styles/css/bootstrap.min.css" />
     <script src="/styles/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/styles/style.css" />
-    <title>Document</title>
+    <title>Silicon Design</title>
   </head>
   <body>
     <header class="page-0">
@@ -29,8 +29,12 @@
         </nav>
         <div class="btn-toggle-switch">
           <span class="label">Dark Mode</span>
-          <label class="switch">
-            <input type="checkbox" />
+          <label
+            class="switch"
+            for="darkmode-switch"
+            aria-label="darkmode switch"
+          >
+            <input id="darkmode-switch" type="checkbox" />
             <span class="slider round"></span>
           </label>
         </div>
@@ -67,10 +71,7 @@
             </div>
             <div class="discovermore">
               <button class="btn-discovermore">
-                <img
-                  src="/images/showcase/discovermore.svg"
-                  alt="discover more button"
-                />
+                <i class="bi bi-caret-down-fill"></i>
               </button>
               <p>Discover more</p>
             </div>
@@ -350,7 +351,9 @@
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    <h5>Is any of my personal information stored in the app?</h5>
+                    <h5>
+                      Is any of my personal information stored in the app?
+                    </h5>
 
                     <span class="accordion-icon"
                       ><i class="bi bi-caret-down-fill"></i
@@ -393,7 +396,9 @@
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    <h5>What formats can I download my transaction history in?</h5>
+                    <h5>
+                      What formats can I download my transaction history in?
+                    </h5>
                     <span class="accordion-icon"
                       ><i class="bi bi-caret-down-fill"></i
                     ></span>
@@ -519,8 +524,10 @@
                     aria-expanded="false"
                     aria-controls="collapseFive"
                   >
-                    <h5>Can I create my own password that is easy for me to
-                    remember?</h5>
+                    <h5>
+                      Can I create my own password that is easy for me to
+                      remember?
+                    </h5>
                     <span class="accordion-icon"
                       ><i class="bi bi-caret-down-fill"></i
                     ></span>
@@ -620,7 +627,11 @@
           <div class="newsletter">
             <div class="newsletter-text">
               <img src="/images/subscribe/bell.svg" alt="" />
-              <h2>Subscribe to our newsletter</h2>
+              <h2 class="sub-reg">Subscribe to our newsletter</h2>
+              <h2 class="sub-desktop">
+                Subscribe to our newsletter to stay informed about the latest
+                updates
+              </h2>
             </div>
             <form class="form-email">
               <div class="form-input">
@@ -640,5 +651,6 @@
       </section>
     </main>
     <footer>© 2024 Silicon. All rights reserved. Credit MadrasThemes</footer>
+    <script src="./styles/darkmode.js"></script>
   </body>
 </html>

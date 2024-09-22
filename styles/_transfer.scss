@@ -1,5 +1,6 @@
 .transfer{
    margin-top: 2rem;
+   margin-bottom: 2rem;
    display: none;
 }
 .transfer-grid{
@@ -29,11 +30,12 @@ ul{
 ul li{
    padding-left: 1rem;
    line-height: 30px;
+   color: var(--clr-text);
 }
 
 ul li::marker {
   content: "\2714";
-  color: vars.$primary;
+  color: var(--clr-primary);
 }
 .payment-grid{
    display: grid;

@@ -39,14 +39,14 @@
   height: 50px;
   border-radius: 8px;
   padding: 8px;
-  background-color: vars.$headerColor;
+  background-color: var(--clr-header);
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
   p {
     font-size: 8px;
-    color: #fff;
+    color: var(--clr-white);
     text-align: start;
     letter-spacing: 0.5px;
     span {
@@ -57,7 +57,7 @@
   }
 }
 .fa-apple{
-  color: #fff;
+  color: var(--clr-white);
   font-size: 30px;
 }
 .discovermore {
@@ -73,7 +73,7 @@
   height: 2.5rem;
   border-radius: 1.75rem;
   border: none;
-  background-color: #fff;
+  background-color: var(--clr-white);
 }
 .img-showcase {
   display: none;

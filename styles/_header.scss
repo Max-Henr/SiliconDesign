@@ -1,14 +1,13 @@
 .header-main {
   display: grid;
   grid-template-columns: 1fr auto auto auto;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
   padding-top: 0.5rem;
 }
 a {
   text-decoration: none;
-  color: vars.$headingDark;
+  color: var(--clr-header);
 }
 .silicon-logo {
   display: flex;
@@ -21,7 +20,7 @@ a {
   display: none;
 }
 .btn-primary {
-  background-color: vars.$primary;
+  background-color: var(--clr-primary);
   color: white;
   padding: 12px 25px;
   border-radius: 8px;
@@ -40,7 +39,8 @@ a {
   border: none;
   background-color: transparent;
   font-size: 1.5rem;
-  color: vars.$mobileMenu;
+  margin-left: 2rem;
+  color: var(--clr-mobilemenu);
 }
 .label {
   display: none;
@@ -88,11 +88,11 @@ a {
 }
 
 input:checked + .slider {
-  background-color: #6366f1;
+  background-color: var(--clr-primary);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #6366f1;
+  box-shadow: 1px 1px 2px var(--clr-primary);
 }
 
 input:checked + .slider:before {
@@ -116,6 +116,9 @@ input:checked + .slider:before {
   }
   .btn-toggle-switch{
     margin-right: 3rem;
+    span{
+      color: var(--clr-header);
+    }
   }
   .label {
     display: inline;

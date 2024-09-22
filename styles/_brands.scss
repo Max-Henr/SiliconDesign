@@ -9,7 +9,7 @@
   align-items: center;
 }
 .brand-box {
-  border: 1px solid vars.$inputPlaceHolder;
+  border: 1px solid var(--clr-gray500);
   border-radius: 8px;
   height: 100px;
   width: 160px;

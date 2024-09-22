@@ -35,7 +35,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: vars.$lightBG;
+  background-color: var(--clr-gray100);
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 1rem;

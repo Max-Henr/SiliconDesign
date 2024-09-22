@@ -7,7 +7,7 @@
   margin-bottom: 3rem;
 }
 .btn-contact {
-  background-color: vars.$primary;
+  background-color: var(--clr-primary);
   color: white;
   width: 162px;
   height: 50px;
@@ -21,10 +21,11 @@
 .newsletter {
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr auto auto;
-  background-color: vars.$lightBG;
-  padding: 0.5rem;
+  grid-template-columns: repeat(8, minmax(0,1fr));
+  background-color: var(--clr-gray100);
+  padding: 3rem 0.5rem;
   border-radius: 0.5rem;
+  align-items: center;
   h2 {
     font-size: 21.6px;
     line-height: 30.2px;
@@ -34,16 +35,20 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 2rem;
+  grid-column: 1/9;
+  // padding-top: 2rem;
+}
+.sub-desktop{
+  display: none;
 }
 .form-email {
-  grid-column: 1/4;
+  grid-column: 1/9;
 }
 .form-input {
   display: flex;
   align-items: center;
   position: relative;
-  padding-bottom: 1.5rem;
+  // padding-bottom: 1.5rem;
   i {
     position: absolute;
     left: 0;
@@ -56,9 +61,10 @@
   width: 100%;
   height: 52px;
   padding-left: 2.5rem;
+  background-color: white;
   &:focus {
     outline: none;
-    box-shadow: 0 0 5px vars.$primary;
+    box-shadow: 0 0 5px var(--clr-primary);
   }
 }
 
@@ -70,11 +76,25 @@
   border-radius: 0 0.5rem 0.5rem 0;
   width: 115px;
   height: 52px;
-  background-color: vars.$primary;
+  background-color: var(--clr-primary);
   color: white;
 }
 @media(min-width: 768px){
   .contact{
     display: none;
+  }
+  .newsletter-text{
+    grid-column: 1/5;
+  }
+  .form-email{
+    grid-column: 5/9;
+  }
+}
+@media(min-width: 1400px){
+  .sub-reg{
+    display: none;
+  }
+  .sub-desktop{
+    display: flex;
   }
 }
